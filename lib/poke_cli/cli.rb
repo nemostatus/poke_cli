@@ -29,7 +29,7 @@ def pokemon_list
    
 end 
 def pokemon_selection(pokemon)
-  puts "#{pokemon.name}"
+ p= Pokemon.find_by_name(pokemon)
   
 end 
   def bye 

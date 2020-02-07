@@ -1,10 +1,10 @@
 class API 
  
  def self.get_data
-    response = RestClient.get("")
+    response = RestClient.get("https://pokeapi.co/api/v2/pokemon/")
     pokemon_array = JSON.parse(response.body)["results"]
-    pokemon_array.each do |pokemon|
+   pokemon_array.each do |pokemon|
       Pokemon.new(pokemon)
     end 
   end 
-end 
+end
