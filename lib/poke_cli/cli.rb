@@ -8,12 +8,24 @@ class PokeCli::CLI
   def menu 
     input = gets.strip.downcase
     if input == "pokedex"
-      puts "pokedex"
-      elsif input == "exit"
-      puts "exit"
-    else 
-      puts "invalid pokedex entry."
+      pokemon_list
       menu
+      elsif input == "exit"
+      bye
+    else 
+      invalid_entry
   end 
 end 
+def pokemon_list
+  puts "1. pokemon 1"
+   puts "2. pokemon 2"
+   puts "3. pokemon 3"
+end 
+  def bye 
+    puts "Enjoy your journey and try to catch 'em all!"
+  end
+  def invalid_entry
+    puts "Invalid pokedex entry."
+      menu
+  end 
 end 
