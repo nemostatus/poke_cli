@@ -3,6 +3,7 @@ class PokeCli::CLI
     puts "Welcome pokemon trainer"
     puts "To use your pokedex and view a pokemon enter: 'pokedex'"
     puts "To continue on your journey enter: 'exit'"
+    API.get_data
     menu
   end 
   def menu 
