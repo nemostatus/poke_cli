@@ -1,6 +1,3 @@
-require "poke_cli/version"
+require_relative "./poke_cli/version"
 
-module PokeCli
-  class Error < StandardError; end
-  # Your code goes here...
-end
+puts "enviornment"
