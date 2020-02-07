@@ -1,3 +1,4 @@
+
 class API 
  
  def self.get_data
@@ -7,9 +8,11 @@ class API
       Pokemon.new(pokemon)
     end 
   end 
-  def self.more_data(input) 
-     response = RestClient.get("https://pokeapi.co/api/v2/pokemon/#{input}") 
-    
-   end 
+  def self.more_data
+     response = RestClient.get("https://pokeapi.co/api/v2/pokemon/1")
+     pokemon_array = JSON.parse(response.body)["abilities"]
+    end 
+  end 
+ 
   
-end
+
