@@ -18,9 +18,9 @@ class PokeCli::CLI
   end 
 end 
 def pokemon_list
-  puts "1. pokemon 1"
-   puts "2. pokemon 2"
-   puts "3. pokemon 3"
+ Pokemon.all.each_with_index do |pokemon,index|
+      puts "#{index + 1}. #{pokemon.name}"
+    end 
    puts ""
    puts ""
    puts "Which pokemon would you like stats about?"
@@ -29,7 +29,8 @@ def pokemon_list
    
 end 
 def pokemon_selection(pokemon)
-  puts "#{pokemon}"
+  puts "#{pokemon.name}"
+  
 end 
   def bye 
     puts "Enjoy your journey and try to catch 'em all!"
