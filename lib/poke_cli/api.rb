@@ -7,4 +7,9 @@ class API
       Pokemon.new(pokemon)
     end 
   end 
+  def self.more_data(input) 
+     response = RestClient.get("https://pokeapi.co/api/v2/pokemon/#{input}") 
+    
+   end 
+  
 end

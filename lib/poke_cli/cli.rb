@@ -25,7 +25,8 @@ def pokemon_list
    puts ""
    puts "Which pokemon would you like stats about?"
    input = gets.strip.downcase
-   pokemon_selection(pokemon)
+   API.more_data(input)
+   
    
 end 
 def pokemon_selection(pokemon)
