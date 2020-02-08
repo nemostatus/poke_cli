@@ -24,8 +24,8 @@ def pokemon_list
    puts ""
    puts ""
    puts "Which pokemon would you like stats about?"
-   input = gets.strip.downcase
-   puts API.more_data
+   number = gets.strip.downcase
+   puts API.more_data(number)
    
    
 end 
