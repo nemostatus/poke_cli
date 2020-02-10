@@ -1,5 +1,5 @@
 class Pokemon
-  attr_accessor :name,:abilities
+  attr_accessor :name, :base_experience
   
   @@all = []
   
