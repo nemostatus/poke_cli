@@ -31,7 +31,9 @@ def pokemon_selection(name)
    poke= Pokemon.find_by_name(name)
  poke.each do |a|
    puts "Name: #{a.name}"
-  puts API.more_data("#{a.url}")
+new = API.more_data("#{a.url}")
+puts new
+
 
 end 
 end 

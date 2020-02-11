@@ -10,7 +10,11 @@ class API
   end
   def self.more_data(url)
     response = RestClient.get(url)
+    pokemon_array = JSON.parse(response.body)["abilities"]
+ pokemon_array.each do |pokemon|
+      Pokemon.new(pokemon)
   end
+end 
 end 
  
   
