@@ -18,19 +18,18 @@ class PokeCli::CLI
   end 
 end 
 def pokemon_list
+   puts "Which pokemon and stats would you like to know about?"
  Pokemon.all.each_with_index do |pokemon,index|
       puts "#{index + 1}. #{pokemon.name}"
     end 
    puts ""
    puts ""
-   puts "Which pokemon and stats would you like to know about?"
-  puts
-  "1. Abilities
-   2.base_experience
-   3.weight
-   4.height
-   5.moves
-   6.types"
+   puts  "1. Abilities
+  2.base_experience
+  3.weight
+  4.height
+  5.moves
+  6.types"
  pokemon_stats
    end
    
