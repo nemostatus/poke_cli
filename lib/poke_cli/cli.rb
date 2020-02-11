@@ -24,12 +24,13 @@ def pokemon_list
    puts ""
    puts ""
    puts "Which pokemon and stats would you like to know about?"
-  
- pokemon_ability
+  puts "Abilities"
+ pokemon_stats
    end
    
-  def pokemon_ability
-       name = gets.strip.downcase
+  def pokemon_stats
+     name = gets.strip.downcase
+       stat = gets.strip.downcase
 puts API.more_data(name,stat)
   end 
   def bye 
