@@ -24,7 +24,13 @@ def pokemon_list
    puts ""
    puts ""
    puts "Which pokemon and stats would you like to know about?"
-  puts "Abilities"
+  puts
+  "1. Abilities
+   2.base_experience
+   3.weight
+   4.height
+   5.moves
+   6.types"
  pokemon_stats
    end
    
