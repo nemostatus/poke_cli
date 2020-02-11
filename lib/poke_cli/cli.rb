@@ -18,26 +18,26 @@ class PokeCli::CLI
   end 
 end 
 def pokemon_list
-   puts "Which pokemon and stats would you like to know about?"
+  
  Pokemon.all.each_with_index do |pokemon,index|
       puts "#{index + 1}. #{pokemon.name}"
     end 
    puts ""
    puts ""
-   puts  "1. Abilities
+    puts "Which pokemon would you like to know about?"
+    name = gets.strip.downcase
+    puts "Which stats would you like to know?"
+    puts  "1. Abilities
   2.Base_experience
   3.Weight
   4.Height
   5.Moves
   6.Types"
- pokemon_stats
-   end
+    stat = gets.strip.downcase
    
-  def pokemon_stats
-     name = gets.strip.downcase
-       stat = gets.strip.downcase
-puts API.more_data(name,stat)
-  end 
+ puts API.more_data(name,stat)
+   end
+  
   def bye 
     puts "Enjoy your journey and try to catch 'em all!"
   end
