@@ -1,5 +1,5 @@
 class Pokemon
-  attr_accessor :name,:url
+  attr_accessor :name
   
   @@all = []
   
