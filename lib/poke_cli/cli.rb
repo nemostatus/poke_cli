@@ -24,14 +24,15 @@ def pokemon_list
    puts ""
    puts ""
    puts "Which pokemon would you like stats about?"
-   number = gets.strip.downcase
-   puts API.more_data(number)
+   name = gets.strip.downcase
+pokemon_selection(name)
    end 
-def pokemon_selection(pokemon)
- poke= Pokemon.find_by_name(pokemon)
- poke.each do |p|
-   puts "Name: #{p.name}"
-   puts "Experience: #{p.base_experience}"
+def pokemon_selection(name)
+   poke= Pokemon.find_by_name(name)
+ poke.each do |a|
+   puts "Name: #{a.name}"
+  puts API.more_data("#{a.url}")
+
 end 
 end 
   def bye 

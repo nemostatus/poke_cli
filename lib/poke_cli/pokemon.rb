@@ -1,5 +1,5 @@
 class Pokemon
-  attr_accessor :name, :base_experience
+  attr_accessor :name,:url
   
   @@all = []
   
@@ -21,6 +21,7 @@ end
 def self.find_by_name(name)
   self.all.select do |pokemon| 
     pokemon.name.downcase == name  
+     
   end 
 end  
 end
