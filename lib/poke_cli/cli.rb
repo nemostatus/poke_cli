@@ -25,11 +25,11 @@ def pokemon_list
    puts ""
    puts ""
    puts  "1. Abilities
-  2.base_experience
-  3.weight
-  4.height
-  5.moves
-  6.types"
+  2.Base_experience
+  3.Weight
+  4.Height
+  5.Moves
+  6.Types"
  pokemon_stats
    end
    
