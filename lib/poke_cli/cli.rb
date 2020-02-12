@@ -58,7 +58,8 @@ puts "1. Abilities
     bye
     exit
    else 
-   invalid_entry
+   choice
+  
  end 
  end 
   
