@@ -40,12 +40,12 @@ def pokemon_list
    end 
    
    def stat_list
-       puts  "1. Abilities
-  2.Base_experience(xp gained for defeating this pokemon)
-  3.Weight(hectograms)
-  4.Height(decimetres)
-  5.Moves
-  6.Types"
+puts "1. Abilities
+    2.Base_experience(xp gained for defeating this pokemon)
+    3.Weight(hectograms)
+    4.Height(decimetres)
+    5.Moves
+    6.Types"
    end 
   
    def choice 
