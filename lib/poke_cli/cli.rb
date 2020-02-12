@@ -1,5 +1,6 @@
-class PokeCli::CLI 
-  def call 
+class PokeCli::CLI
+  
+def call 
     puts "Welcome pokemon trainer"
     puts "To use your pokedex and view a pokemon enter: 'pokedex'"
     puts "To continue on your journey enter: 'exit'"
@@ -24,7 +25,11 @@ def pokemon_list
     end 
    puts ""
    puts ""
-    puts "Which pokemon would you like to know about?"
+   pokemon_stats
+   choice
+   end
+   def pokemon_stats 
+      puts "Which pokemon would you like to know about?"
     name = gets.strip.downcase
     puts "Which stats would you like to know?"
     puts  "1. Abilities
@@ -35,17 +40,21 @@ def pokemon_list
   6.Types"
     stat = gets.strip.downcase
    puts API.more_data(name,stat)
-   choice
-   end
+   end 
+  
    def choice 
-     puts "Would you like to learn more about pokemon?"
+     puts "Would you like to learn about more pokemon?"
      puts "y/n"
      input = gets.strip.downcase 
      if input == "y"
-       pokemon_list
-     elsif input == "n"
-     bye 
-   end 
+       pokemon_list 
+     elsif input == "y"
+    pokemon_list 
+    elsif input == "n"
+    bye
+   end
+ else 
+   invalid_entry
  end 
   
   def bye 
