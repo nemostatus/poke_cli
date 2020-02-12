@@ -56,6 +56,7 @@ def pokemon_list
     pokemon_list 
     elsif input == "n"
     bye
+    exit
    else 
    invalid_entry
  end 
