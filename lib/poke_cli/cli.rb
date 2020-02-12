@@ -30,8 +30,10 @@ def pokemon_list
    end
    def pokemon_stats 
       puts "Which pokemon would you like to know about?"
+      puts "Please enter number or name of pokemon."
     name = gets.strip.downcase
     puts "Which stats would you like to know?"
+    puts "Please enter by keyword."
     stat_list
     stat = gets.strip.downcase
    puts API.more_data(name,stat)
@@ -39,9 +41,9 @@ def pokemon_list
    
    def stat_list
        puts  "1. Abilities
-  2.Base_experience
+  2.Base_experience(xp gained for defeating this pokemon)
   3.Weight(hectograms)
-  4.Heigh(decimetres)
+  4.Height(decimetres)
   5.Moves
   6.Types"
    end 
